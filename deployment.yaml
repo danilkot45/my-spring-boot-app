@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-spring-boot-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-spring-boot-app
+  template:
+    metadata:
+      labels:
+        app: my-spring-boot-app
+    spec:
+      containers:
+        - name: my-spring-boot-app
+          image: my-spring-boot-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
