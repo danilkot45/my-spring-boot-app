@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-spring-boot-app
-          image: my-spring-boot-app:latest
+          image: danilkot45/my-spring-boot-app:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
